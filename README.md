@@ -3,7 +3,7 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sramitsharma&layout=compact)](https://github.com/sramitsharma/simili)
 
 <a href="https://github.com/sramitsharma/simili">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=sramitsharma&repo=simili" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=sramitsharma&show_icons=true&theme=radical" />
 </a>
 <a href="https://github.com/sramitsharma/simili">
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sramitsharma&layout=compact" />
