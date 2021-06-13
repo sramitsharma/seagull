@@ -14,12 +14,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "OGYwMzA0OTQtYjFmMC00NjE1LTlkODctOGU5YTJkMmQ0ZGJjfHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
@@ -32,9 +27,10 @@
     },
     "seagull-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "seagull"
-      ]
+      "implicitDependencies": ["seagull"]
+    },
+    "core": {
+      "tags": []
     }
   }
 }
