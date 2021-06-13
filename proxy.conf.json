@@ -1,0 +1,32 @@
+{
+  "/api": {
+    "target": "https://arrisca.herokuapp.com",
+    "secure": false
+  },
+  "/training": {
+    "target": "http://localhost:8089/dLicencetraining",
+    "secure": false
+  },
+  "/userByUserId": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/gh": {
+    "target": "https://cdn.staticaly.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/engine-rest": {
+    "target": "https://arrisca.herokuapp.com",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/camunda": {
+    "target": "https://arrisca.herokuapp.com",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

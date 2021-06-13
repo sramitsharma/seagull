@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'seagull';
   dataToDisplay: any;
   constructor(private http: HttpClient) {
-    this.http.get(environment.serverUrl + '').subscribe(data => {
+    this.http.get(environment.serverUrl + '/tea/getTea').subscribe(data => {
       this.dataToDisplay = data;
     });
   }
