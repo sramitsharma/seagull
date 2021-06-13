@@ -9,4 +9,10 @@ import { environment } from '../environments/environment.prod';
 })
 export class AppComponent {
   title = 'seagull';
+  dataToDisplay: any;
+  constructor(private http: HttpClient) {
+    this.http.get(environment.serverUrl + '').subscribe(data => {
+      this.dataToDisplay = data;
+    });
+  }
 }
