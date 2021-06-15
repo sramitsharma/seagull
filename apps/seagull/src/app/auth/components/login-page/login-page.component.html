@@ -1,0 +1,19 @@
+<div class="loginPage">
+  <div class="title">Arrisca</div>
+  <form (ngSubmit)="onLogin()" [formGroup]="loginForm" class="loginActionContainer">
+    <mat-form-field>
+      <input autocomplete="on" formControlName="email" matInput placeholder="Email">
+    </mat-form-field>
+    <mat-form-field>
+      <input autocomplete="current-password" formControlName="password" matInput placeholder="Password"
+             type="password">
+    </mat-form-field>
+    <div class="loginActions">
+      <button color="primary" mat-raised-button value="Login">Login</button>
+      <button (click)="onSignUp()" color="accent" mat-raised-button value="Login">SignUp</button>
+    </div>
+    <div class='twitterSignIn'>
+      <img (click)="onLoginWithTwitter()" alt="twitterLogin" src="./assets/images/twitterLogo.png" style="width: 25px;"/>
+    </div>
+  </form>
+</div>

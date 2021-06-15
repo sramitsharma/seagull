@@ -5,5 +5,25 @@
     "types": []
   },
   "files": ["src/main.ts", "src/polyfills.ts"],
-  "include": ["src/**/*.d.ts"]
+  "include": ["src/**/*.d.ts"],
+  "paths": {
+    "@shared/*": [
+      "app/shared/*"
+    ],
+    "@core/*": [
+      "app/core/*"
+    ],
+    "@home/*": [
+      "app/home/*"
+    ],
+    "@dashboard/*": [
+      "app/dashboard/*"
+    ],
+    "@auth/*": [
+      "app/auth/*"
+    ],
+    "@chat/*": [
+      "app/chat/*"
+    ]
+  }
 }

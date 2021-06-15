@@ -1,0 +1,28 @@
+<div class="loginPage">
+  <h1 class="title animate__animated animate__rubberBand">ArriscA</h1>
+  <div class="loginContainer">
+    <form (ngSubmit)="onSignUp()" [formGroup]="signUpForm">
+      <mat-form-field>
+        <input autocomplete="on" formControlName="firstName" matInput placeholder="First Name">
+      </mat-form-field>
+      <mat-form-field>
+        <input autocomplete="on" formControlName="lastName" matInput placeholder="Last Name">
+      </mat-form-field>
+      <mat-form-field>
+        <input autocomplete="on" formControlName="email" matInput placeholder="Email">
+      </mat-form-field>
+      <mat-form-field>
+        <input autocomplete="on" formControlName="password" matInput placeholder="Password" type="password">
+      </mat-form-field>
+      <div class="loginActions">
+        <button color="primary" mat-raised-button value="signUp">SignUp</button>
+        <button (click)="onLogin()" color="accent" mat-raised-button value="Login">Login</button>
+      </div>
+      <hr style=""/>
+      <div class='twitterSignIn'>
+        <img (click)="onLoginWithTwitter()" alt="twitterLogin" style="width: 25px;"
+             src="./assets/images/twitterLogo.png"/>
+      </div>
+    </form>
+  </div>
+</div>

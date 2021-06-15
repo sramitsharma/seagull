@@ -52,7 +52,10 @@
               "apps/seagull/src/favicon.ico",
               "apps/seagull/src/assets"
             ],
-            "styles": ["apps/seagull/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "apps/seagull/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -151,6 +154,27 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/seagull-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "core": {
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core"],
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    <li *ngFor="let component of componentList">
+      <div (click)="onNavigationIconClicked(component)">
+        <mat-icon #tooltip="matTooltip"
+                  [matTooltipPosition]="'right'" class="animate__animated animate__fadeInDown"
+                  id="{{component.tagId}}" matTooltip="{{component.title}}">{{component.tagId}}
+        </mat-icon>
+        <div>{{component.title}}</div>
+      </div>
+    </li>
+  </ul>
+</div>
