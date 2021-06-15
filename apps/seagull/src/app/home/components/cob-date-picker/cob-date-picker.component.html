@@ -1,0 +1,10 @@
+<mat-form-field [formGroup]="cobDateForm" class="cobDatePicker">
+  <input (click)="picker.open()" (dateChange)="onCobSelect($event)" [matDatepickerFilter]="validDateFilter"
+         [matDatepicker]="picker"
+         formControlName="validCob" matInput placeholder="Please Select Tweet Date" readonly="readonly">
+  <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #picker [dateClass]="dateClass"></mat-datepicker>
+  <mat-error *ngIf="cobDateForm.get('validCob')?.hasError('matDatepickerFilter')">
+    No Tweet found for given date
+  </mat-error>
+</mat-form-field>

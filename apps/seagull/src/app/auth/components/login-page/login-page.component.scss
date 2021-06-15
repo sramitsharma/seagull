@@ -1,0 +1,74 @@
+.loginActionContainer {
+  display: grid;
+  grid-template-rows: repeat(4, 2fr);
+  justify-content: center;
+
+  mat-form-field {
+    width: 300px;
+  }
+}
+
+.twitterSignIn {
+  width: 25px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.title {
+  padding-bottom: 80px;
+  font-size: 45px;
+  text-align: center;
+}
+
+.formActions {
+  margin: auto;
+
+  button {
+    margin: 5px;
+  }
+}
+
+.loginPage {
+  height: 100vh;
+  mat-form-field {
+    width: 300px;
+  }
+}
+
+.loginActions {
+  margin: auto;
+  button {
+    margin: 5px;
+  }
+}
+/*
+form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+ul {
+  list-style: none;
+  display: flex;
+  letter-spacing: 2px;
+}
+li {
+  margin-left: 35px;
+}
+.topMenus {
+  float: right;
+  right: 220px;
+  position: absolute;
+}
+button {
+  margin-left: 5px;
+}
+q {
+  quotes: "❝" "❞";
+  text-align: center;
+  margin: 75px 359px;
+  display: flex;
+}
+.loginForm{
+}
+*/

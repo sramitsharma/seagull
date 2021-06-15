@@ -1,0 +1,35 @@
+mat-toolbar {
+  background: #27293d;
+  color: white;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.appCurrentScreen {
+  display: flex;
+  width: 100%;
+}
+
+hr {
+  height: 40px;
+  width: 0;
+  margin: 15px;
+}
+
+.navbar_icon {
+  margin-right: 5px;
+}
+
+.notificationIcon {
+  margin-top: 5px;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 75px;
+}
+
+mat-icon {
+  color: white;
+}
