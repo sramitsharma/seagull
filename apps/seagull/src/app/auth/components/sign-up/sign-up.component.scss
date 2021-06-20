@@ -1,4 +1,6 @@
 .loginContainer {
+  backdrop-filter: blur(4px);
+  margin-top: 95px;
   mat-form-field {
     width: 150px;
   }
@@ -9,13 +11,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-hr {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 35%;
-  margin-inline-end: 35%;
 }
 
 .loginActions {
@@ -33,18 +28,11 @@ mat-form-field {
 .title {
   text-align: center;
   font-size: 500%;
+  color: whitesmoke;
 }
 
 .loginPage {
   height: 100vh;
-}
-
-hr::before {
-  display: block;
-  content: "OR";
-  position: absolute;
-  left: 42%;
-  padding: 0 10px;
 }
 
 form {
@@ -52,4 +40,8 @@ form {
   display: flex;
   flex-direction: column;
   margin: auto;
+}
+
+.placeholder {
+  color: darkcyan;
 }

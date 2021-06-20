@@ -12,12 +12,12 @@ const routes: Routes = [
       {
         path: 'dashboard',
         canActivate: [AuthGuard],
-        loadChildren: async () => (await import('../dashboard/dashboard.module')).DashboardModule
+        loadChildren: () => import('./../dashboard/dashboard.module').then(m => m.DashboardModule),
       },
       {
         path: 'chat',
         canActivate: [AuthGuard],
-        loadChildren: async () => (await import('../chat/chat.module')).ChatModule
+        loadChildren: () => import('./../chat/chat.module').then(m => m.ChatModule)
       }
     ]
   }

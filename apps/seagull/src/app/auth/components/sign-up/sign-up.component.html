@@ -1,24 +1,27 @@
 <div class="loginPage">
-  <h1 class="title animate__animated animate__rubberBand">Seagull</h1>
+  <div class="title animate__animated animate__rubberBand">SeaGull</div>
   <div class="loginContainer">
     <form (ngSubmit)="onSignUp()" [formGroup]="signUpForm">
       <mat-form-field>
-        <input autocomplete="on" formControlName="firstName" matInput placeholder="First Name">
+        <input autocomplete="on" formControlName="firstName" matInput>
+        <mat-placeholder class="placeholder">First Name</mat-placeholder>
       </mat-form-field>
       <mat-form-field>
-        <input autocomplete="on" formControlName="lastName" matInput placeholder="Last Name">
+        <input autocomplete="on" formControlName="lastName" matInput>
+        <mat-placeholder class="placeholder">Last Name</mat-placeholder>
       </mat-form-field>
       <mat-form-field>
-        <input autocomplete="on" formControlName="email" matInput placeholder="Email">
+        <input autocomplete="on" formControlName="email" matInput>
+        <mat-placeholder class="placeholder">Email</mat-placeholder>
       </mat-form-field>
       <mat-form-field>
-        <input autocomplete="on" formControlName="password" matInput placeholder="Password" type="password">
+        <input autocomplete="on" formControlName="password" matInput type="password">
+        <mat-placeholder class="placeholder">Password</mat-placeholder>
       </mat-form-field>
       <div class="loginActions">
         <button color="primary" mat-raised-button value="signUp">SignUp</button>
         <button (click)="onLogin()" color="accent" mat-raised-button value="Login">Login</button>
       </div>
-      <hr style=""/>
       <div class='twitterSignIn'>
         <img (click)="onLoginWithTwitter()" alt="twitterLogin" style="width: 80px;"
              src="./assets/images/twitterLogo.png"/>
