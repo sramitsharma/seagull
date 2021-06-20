@@ -1,9 +1,9 @@
-import {NgModule} from '@angular/core';
-import {homePageFeatureKey, reducer} from './reducers/home-page.reducer';
+import { NgModule } from '@angular/core';
+import { homePageFeatureKey, reducer } from './reducers/home-page.reducer';
 
-import {CommonModule} from '@angular/common';
-import {StoreModule} from '@ngrx/store';
-import {EffectsModule} from '@ngrx/effects';
+import { CommonModule } from '@angular/common';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 import { GlobalSearchComponent } from './components/global-search/global-search.component';
 import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
@@ -15,8 +15,6 @@ import { HomeRoutingModule } from './home-routing.module';
 import { CruxModule } from '../crux/crux.module';
 import { PortfolioSelectComponent } from './components/portfolio-select/portfolio-select.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [HomePageComponent, CobDatePickerComponent,

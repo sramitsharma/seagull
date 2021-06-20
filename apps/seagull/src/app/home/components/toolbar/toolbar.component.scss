@@ -14,13 +14,16 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  background-color: #0e0e11;
+  color: white;
 }
 
-.arriscaMatToolBar {
+.seagullMatToolBar {
   padding-top: 10px;
   padding-left: 15px;
 
   img {
-    width: 98%;
+    width: 25%;
   }
 }
+

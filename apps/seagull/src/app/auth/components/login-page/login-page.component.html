@@ -1,19 +1,22 @@
 <div class="loginPage">
-  <div class="title">Arrisca</div>
-  <form (ngSubmit)="onLogin()" [formGroup]="loginForm" class="loginActionContainer">
-    <mat-form-field>
-      <input autocomplete="on" formControlName="email" matInput placeholder="Email">
-    </mat-form-field>
-    <mat-form-field>
-      <input autocomplete="current-password" formControlName="password" matInput placeholder="Password"
-             type="password">
-    </mat-form-field>
-    <div class="loginActions">
-      <button color="primary" mat-raised-button value="Login">Login</button>
-      <button (click)="onSignUp()" color="accent" mat-raised-button value="Login">SignUp</button>
-    </div>
-    <div class='twitterSignIn'>
-      <img (click)="onLoginWithTwitter()" alt="twitterLogin" src="./assets/images/twitterLogo.png" style="width: 25px;"/>
-    </div>
-  </form>
+  <h1 class="title animate__animated animate__rubberBand">Seagull</h1>
+  <div class="loginContainer">
+    <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+      <mat-form-field>
+        <input autocomplete="on" formControlName="email" matInput placeholder="Email">
+      </mat-form-field>
+      <mat-form-field>
+        <input autocomplete="current-password" formControlName="password" matInput placeholder="Password">
+      </mat-form-field>
+      <div class="loginActions">
+        <button type="submit" color="primary" mat-raised-button value="Login">Login</button>
+        <button type="button" (click)="onSignUp()" color="accent" mat-raised-button value="Login">Register</button>
+      </div>
+      <hr style=""/>
+      <div class='twitterSignIn'>
+        <img (click)="onLoginWithTwitter()" alt="twitterLogin" style="width: 80px;"
+             src="./assets/images/twitterLogo.png"/>
+      </div>
+    </form>
+  </div>
 </div>

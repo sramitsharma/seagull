@@ -1,12 +1,5 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CruxRoutingModule } from './crux-routing.module';
-import { BrowserModule } from '@angular/platform-browser';
-import { AngularFireModule } from '@angular/fire';
-import { environment } from '../../environments/environment.prod';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
-import { AngularFireStorageModule } from '@angular/fire/storage';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -49,7 +42,6 @@ const MATERIAL_MODULES = [
 
 @NgModule({
   imports: [
-    BrowserModule,
     MATERIAL_MODULES,
     CruxRoutingModule,
     HttpClientModule,

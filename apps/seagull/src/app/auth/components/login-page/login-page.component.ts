@@ -12,8 +12,8 @@ import { authActionTypes } from '../../actions';
 })
 export class LoginPageComponent {
   loginForm = new FormGroup({
-    email: new FormControl('amit' + Math.random().toFixed(0) + '@gmail.com'),
-    password: new FormControl('amit123*')
+    email: new FormControl(''),
+    password: new FormControl('')
   });
 
   constructor(private router: Router, private authStore: Store<AuthState>) {
@@ -31,6 +31,6 @@ export class LoginPageComponent {
   }
 
   onSignUp(): void {
-    this.router.navigate(['/signUp']).then(r => console.log('Data: ' + r));
+    this.router.navigate(['auth/register']).then(r => console.log('Data: ' + r));
   }
 }

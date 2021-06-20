@@ -1,10 +1,6 @@
 .loginContainer {
-  position: relative;
-  margin: auto;
-  top: 35%;
-
   mat-form-field {
-    width: 300px;
+    width: 150px;
   }
 }
 
@@ -35,16 +31,8 @@ mat-form-field {
 }
 
 .title {
-  margin-top: 25px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
   text-align: center;
-  font-size: 700%;
-  letter-spacing: -5px;
+  font-size: 500%;
 }
 
 .loginPage {
@@ -55,14 +43,12 @@ hr::before {
   display: block;
   content: "OR";
   position: absolute;
-  bottom: 27px;
-  left: 49%;
-  background-color: white;
+  left: 42%;
   padding: 0 10px;
 }
 
 form {
-  width: 30%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   margin: auto;

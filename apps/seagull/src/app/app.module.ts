@@ -46,7 +46,10 @@ firebase.initializeApp(environment.firebaseConfig);
       }
     }),
     EffectsModule.forRoot([]),
-    !environment.production ? StoreDevtoolsModule.instrument({ name: 'Seagull', maxAge: 25 }) : StoreDevtoolsModule.instrument({ name: 'Seagull', maxAge: 25 })
+    !environment.production ? StoreDevtoolsModule.instrument({
+      name: 'Seagull',
+      maxAge: 25
+    }) : StoreDevtoolsModule.instrument({ name: 'Seagull', maxAge: 25 })
   ],
   bootstrap: [AppComponent]
 })

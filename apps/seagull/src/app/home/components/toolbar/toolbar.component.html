@@ -3,8 +3,8 @@
       [attr.role]="'navigation'"
       [mode]="'over'"
       [opened]="isOpen">
-    <mat-toolbar class="arriscaMatToolBar">
-      <img src="../../../../assets/images/logo.png" alt="Arrisca" />
+    <mat-toolbar class="seagullMatToolBar">
+      <img src="../../../../assets/images/logo.png" alt="Seagull" />
     </mat-toolbar>
     <mat-nav-list>
       <a *ngFor="let component of componentList"
@@ -26,7 +26,7 @@
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Arrisca</span>
+      <span>Seagull</span>
     </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -16,10 +16,10 @@ import { CruxModule } from '../crux/crux.module';
   imports: [
     CommonModule,
     MatFormFieldModule,
+    AuthRoutingModule,
     CruxModule,
     StoreModule.forFeature(authFeatureKey, authReducer),
     EffectsModule.forFeature([AuthEffect]),
-    AuthRoutingModule,
     ReactiveFormsModule
   ]
 })
