@@ -1,74 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-// @import '~animate.css/animate.min';
+@import '~animate.css/animate.min';
 // @import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
 // @import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
-
-html, body {
-  height: 100%;
-  scroll-behavior: smooth;
-  font-family: 'Montserrat', sans-serif;
-}
+html,
 body {
-  margin: 0;
-  background: url("assets/images/lady1.jpeg") no-repeat fixed;
-  // background-image: linear-gradient(to right bottom, #5f8158, #598865, #538e73, #4e9481, #4a9a90);
-  image-rendering: pixelated;
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
 }
 
-body [class^='mat-'], body [class*=' mat-'] {
-  font-family: 'Montserrat', sans-serif;
+body {
+    margin: 0;
+    background: url("assets/images/lady1.jpeg") no-repeat fixed;
+    // background-image: linear-gradient(to right bottom, #5f8158, #598865, #538e73, #4e9481, #4a9a90);
+    image-rendering: pixelated;
+}
+
+body [class^='mat-'],
+body [class*=' mat-'] {
+    font-family: 'Montserrat', sans-serif;
 }
 
 body .material-icons {
-  font-family: 'Material Icons', serif;
-  color: white;
-  cursor: pointer;
+    font-family: 'Material Icons', serif;
+    color: white;
+    cursor: pointer;
 }
 
 .mat-error {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .errorMessageDisplay {
-  background-color: red;
-  color: black;
+    background-color: red;
+    color: black;
 }
 
 .successMessageDisplay {
-  background-color: blueviolet;
-  color: white;
+    background-color: blueviolet;
+    color: white;
 }
 
 body::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
+    width: 12px;
+    /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-  background: #14141a; /* color of the tracking area */
+    background: #14141a;
+    /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: white; /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid #14141a; /* creates padding around scroll thumb */
+    background-color: white;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #14141a;
+    /* creates padding around scroll thumb */
 }
 
-.highlight:not(.djs-connection) .djs-visual > :nth-child(1) {
-  fill: #c2d422 !important; /* color elements as green */
-  color: white !important;
+.highlight:not(.djs-connection) .djs-visual> :nth-child(1) {
+    fill: #c2d422 !important;
+    /* color elements as green */
+    color: white !important;
 }
+
 .djs-element.selected .djs-outline {
-  stroke: none;
-  stroke-width: 0;
+    stroke: none;
+    stroke-width: 0;
 }
 
 .djs-element.hover .djs-outline {
-  stroke: none;
-  stroke-width: 0;
+    stroke: none;
+    stroke-width: 0;
 }
 
 .djs-visual {
-  color: white !important;
+    color: white !important;
 }
