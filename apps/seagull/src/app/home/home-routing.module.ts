@@ -2,22 +2,23 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AuthGuard } from '@seagull/core/gaurds/AuthGuard';
+import { async } from '@angular/core/testing';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomePageComponent,
     canActivate: [AuthGuard],
     children: [
       {
         path: 'dashboard',
         canActivate: [AuthGuard],
-        loadChildren: () => import('./../dashboard/dashboard.module').then(m => m.DashboardModule),
+        loadChildren: async () => (await import('../dashboard/dashboard.module')).DashboardModule
       },
       {
         path: 'chat',
         canActivate: [AuthGuard],
-        loadChildren: () => import('./../chat/chat.module').then(m => m.ChatModule)
+        loadChildren: async () => (await import('../chat/chat.module')).ChatModule
       }
     ]
   }

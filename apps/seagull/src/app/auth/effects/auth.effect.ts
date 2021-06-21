@@ -68,8 +68,10 @@ export class AuthEffect {
       return this.firebaseService.firebaseLogin({email, password})
         .pipe(
           map((res: any) => {
+            debugger;
             const appUser: User = {
-              ...payload.appUser,
+              email,
+              password: '',
               photoUrl: res.user?.photoURL,
               phoneNumber: res.user?.phoneNumber,
               twitterScreenName: null,
@@ -85,7 +87,7 @@ export class AuthEffect {
   // onLoginSuccess effect
   onLoginSuccess$: Observable<Action> = createEffect(() => this.actions$.pipe(
     ofType(authActionTypes.onLoginSuccess),
-    tap(() => this.router.navigate(['/home/dashboard']))
+    tap(() => this.router.navigate(['/dashboard']))
   ), {dispatch: false});
 
   // onLoginFail effect

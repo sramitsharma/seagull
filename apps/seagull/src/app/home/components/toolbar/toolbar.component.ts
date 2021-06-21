@@ -23,32 +23,32 @@ export class ToolbarComponent {
       {
         title: 'Dashboard',
         tagId: 'dashboard',
-        route: 'home/dashboard'
-      }, {
-        title: 'Favorite',
-        tagId: 'favorite',
-        route: 'home/favorite'
-      }, {
-        title: 'Share',
-        tagId: 'share',
-        route: 'home/share'
-      }, {
-        title: 'Chat',
-        tagId: 'sms',
-        route: 'home/chat'
-      }, {
-        title: 'Video',
-        tagId: 'voice_chat',
-        route: 'home/voice'
-      }, {
-        title: 'Admin',
-        tagId: 'person',
-        route: 'home/person'
-      }, {
-        title: 'Settings',
-        tagId: 'settings',
-        route: 'home/settings'
-      }
+        route: '/dashboard'
+       }//, {
+      //   title: 'Favorite',
+      //   tagId: 'favorite',
+      //   route: '/favorite'
+      // }, {
+      //   title: 'Share',
+      //   tagId: 'share',
+      //   route: '/share'
+      // }, {
+      //   title: 'Chat',
+      //   tagId: 'sms',
+      //   route: '/chat'
+      // }, {
+      //   title: 'Video',
+      //   tagId: 'voice_chat',
+      //   route: '/voice'
+      // }, {
+      //   title: 'Admin',
+      //   tagId: 'person',
+      //   route: '/person'
+      // }, {
+      //   title: 'Settings',
+      //   tagId: 'settings',
+      //   route: '/settings'
+      // }
     ];
   }
 

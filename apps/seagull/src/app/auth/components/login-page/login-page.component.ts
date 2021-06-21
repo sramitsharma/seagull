@@ -12,8 +12,8 @@ import { authActionTypes } from '../../actions';
 })
 export class LoginPageComponent {
   loginForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl('')
+    email: new FormControl('amit@gmail.com'),
+    password: new FormControl('password')
   });
 
   constructor(private router: Router, private authStore: Store<AuthState>) {

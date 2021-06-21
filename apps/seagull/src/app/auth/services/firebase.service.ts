@@ -19,6 +19,6 @@ export class FirebaseService {
   }
 
   firebaseLogin(userToLogin: User): Observable<firebase.default.auth.UserCredential> {
-    return from(firebase.default.auth().signInWithEmailAndPassword(userToLogin.email, userToLogin.password));
+    return from(firebase.default.auth().signInWithEmailAndPassword(userToLogin.email, userToLogin.password ));
   }
 }

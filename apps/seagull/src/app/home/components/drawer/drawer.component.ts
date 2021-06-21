@@ -36,7 +36,7 @@ export class DrawerComponent {
         this.router.navigate(['/settings']).then();
         break;
       default:
-        this.router.navigate(['/dashboard']).then();
+        this.router.navigate(['home/dashboard']).then();
         break;
     }
   }
