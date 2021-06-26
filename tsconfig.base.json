@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@seagull/core/*": ["libs/core/src/lib/*"],
+      "@core/*": ["libs/core/src/lib/*"],
       "@seagull/dashboard/dash-screen": [
         "libs/dashboard/dash-screen/src/index.ts"
       ]

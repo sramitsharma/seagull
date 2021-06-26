@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
 import {Observable} from 'rxjs';
 
-import { ErrorLogService } from '@seagull/core/services/error-log.service';
 import firebase from 'firebase/app';
+import { ErrorLogService } from '../services/error-log.service';
 
 @Injectable({
   providedIn: 'root'

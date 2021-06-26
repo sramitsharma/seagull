@@ -46,11 +46,6 @@ mat-form-field {
   height: 100vh;
   display: flex;
   align-items: center;
-    /*{
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-    }*/
 }
 
 form {
@@ -62,4 +57,9 @@ form {
 
 .placeholder {
   color: darkcyan;
+}
+
+.title {
+  margin-bottom: 70px;
+  color: #d73636ab;
 }

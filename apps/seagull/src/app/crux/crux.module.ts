@@ -15,11 +15,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { AppInterceptorService } from '@seagull/core/services/app-interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ErrorLogService } from '@seagull/core/services/error-log.service';
-import { AuthGuard } from '@seagull/core/gaurds/AuthGuard';
 import { CommonModule } from '@angular/common';
+import { AuthGuard } from '@core/gaurds/AuthGuard';
+import { ErrorLogService } from '@core/services/error-log.service';
+import { AppInterceptorService } from '@core/services/app-interceptor.service';
 
 const MATERIAL_MODULES = [
   MatToolbarModule,

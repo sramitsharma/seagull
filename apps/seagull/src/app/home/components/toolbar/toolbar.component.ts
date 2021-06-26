@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { SeagullMenu } from '@seagull/core/models/SeagullMenu';
+import { SeagullMenu } from '@core/models/SeagullMenu';
 
 @Component({
   selector: 'seagull-toolbar',

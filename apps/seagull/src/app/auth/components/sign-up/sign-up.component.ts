@@ -3,8 +3,8 @@ import {Router} from '@angular/router';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Store} from '@ngrx/store';
 import { AuthState } from '../../reducers/auth.reducer';
-import { User } from '@seagull/core/models/User';
 import { authActionTypes } from '../../actions';
+import { User } from '@core/models/User';
 
 @Component({
   selector: 'seagull-sign-up',

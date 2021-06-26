@@ -1,4 +1,4 @@
-import { Tweet } from '@seagull/core/models/Tweet';
+import { Tweet } from './Tweet';
 
 export class TwitterUser {
   name: string;

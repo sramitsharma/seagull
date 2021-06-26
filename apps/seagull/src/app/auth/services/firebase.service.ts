@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 import { from, Observable } from 'rxjs';
-import { User } from '@seagull/core/models/User';
+import { User } from '@core/models/User';
 
 @Injectable({
   providedIn: 'root'

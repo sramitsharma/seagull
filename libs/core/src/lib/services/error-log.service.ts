@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {HttpErrorResponse} from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorDisplayService } from './error-display.service';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class ErrorLogService {
   }
 
   logError(error: any): void {
-    const {message, status} = error;
+    const { message, status } = error;
     const errorDate = new Date().toISOString();
 
     if (status && status >= 400 && status < 500) {

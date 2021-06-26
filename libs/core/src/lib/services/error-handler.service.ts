@@ -1,4 +1,4 @@
-import {ErrorHandler, Injectable} from '@angular/core';
+import { ErrorHandler, Injectable } from '@angular/core';
 import { ErrorLogService } from './error-log.service';
 
 @Injectable({

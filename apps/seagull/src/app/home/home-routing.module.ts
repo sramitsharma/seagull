@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './components/home-page/home-page.component';
-import { AuthGuard } from '@seagull/core/gaurds/AuthGuard';
+import { AuthGuard } from '@core/gaurds/AuthGuard';
 
 const routes: Routes = [
   {

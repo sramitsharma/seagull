@@ -5,10 +5,11 @@ import {Observable, of} from 'rxjs';
 import {Action} from '@ngrx/store';
 import {Router} from '@angular/router';
 
-import { ErrorHandlerService } from '@seagull/core/services/error-handler.service';
 import { authActionTypes } from '../actions';
-import { User } from '@seagull/core/models/User';
 import { FirebaseService } from '../services/firebase.service';
+
+import { User } from '@core/models/User';
+import { ErrorHandlerService } from '@core/services/error-handler.service';
 
 @Injectable({
   providedIn: 'root'

@@ -1,8 +1,14 @@
-import {Injectable} from '@angular/core';
-import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
-import {Observable, throwError} from 'rxjs';
-import {environment} from '../../../../../apps/seagull/src/environments/environment';
-import {catchError, map} from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import {
+  HttpErrorResponse,
+  HttpEvent,
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest,
+  HttpResponse
+} from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { ErrorHandlerService } from './error-handler.service';
 
 @Injectable({
@@ -24,11 +30,11 @@ export class AppInterceptorService implements HttpInterceptor {
 
     // set  Content-Type
     if (!httpRequest.headers.has('Content-Type')) {
-      httpRequest = httpRequest.clone({headers: httpRequest.headers.set('Content-Type', 'application/json')});
+      httpRequest = httpRequest.clone({ headers: httpRequest.headers.set('Content-Type', 'application/json') });
     }
 
     // set Accept Headers
-    httpRequest = httpRequest.clone({headers: httpRequest.headers.set('Accept', 'application/json')});
+    httpRequest = httpRequest.clone({ headers: httpRequest.headers.set('Accept', 'application/json') });
 
     // set Access Control Origin Headers
     // httpRequest = httpRequest.clone({headers: httpRequest.headers.set('Access-Control-Allow-Origin', '*')});

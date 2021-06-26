@@ -1,6 +1,6 @@
 import {Action, ActionReducer, createReducer, on} from '@ngrx/store';
 import { authActionTypes } from '../actions';
-import { User } from '@seagull/core/models/User';
+import { User } from '@core/models/User';
 
 export const authFeatureKey = 'AuthKey';
 
