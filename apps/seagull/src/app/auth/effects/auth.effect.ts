@@ -9,8 +9,6 @@ import { ErrorHandlerService } from '@seagull/core/services/error-handler.servic
 import { authActionTypes } from '../actions';
 import { User } from '@seagull/core/models/User';
 import { FirebaseService } from '../services/firebase.service';
-import firebase from 'firebase/app';
-
 
 @Injectable({
   providedIn: 'root'
@@ -68,7 +66,6 @@ export class AuthEffect {
       return this.firebaseService.firebaseLogin({email, password})
         .pipe(
           map((res: any) => {
-            debugger;
             const appUser: User = {
               email,
               password: '',

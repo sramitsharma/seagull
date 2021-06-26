@@ -1,5 +1,4 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { CruxRoutingModule } from './crux-routing.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,6 +19,7 @@ import { AppInterceptorService } from '@seagull/core/services/app-interceptor.se
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorLogService } from '@seagull/core/services/error-log.service';
 import { AuthGuard } from '@seagull/core/gaurds/AuthGuard';
+import { CommonModule } from '@angular/common';
 
 const MATERIAL_MODULES = [
   MatToolbarModule,
@@ -41,14 +41,8 @@ const MATERIAL_MODULES = [
 ];
 
 @NgModule({
-  imports: [
-    MATERIAL_MODULES,
-    CruxRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  exports: [MATERIAL_MODULES],
+  imports: [],
+  exports: [MATERIAL_MODULES, ReactiveFormsModule, CommonModule, HttpClientModule, FormsModule],
   providers: [AuthGuard]
 })
 

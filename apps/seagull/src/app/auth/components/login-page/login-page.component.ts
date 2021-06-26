@@ -31,6 +31,6 @@ export class LoginPageComponent {
   }
 
   onSignUp(): void {
-    this.router.navigate(['auth/register']).then(r => console.log('Data: ' + r));
+    this.router.navigate(['register']).then(r => console.log('Data: ' + r));
   }
 }

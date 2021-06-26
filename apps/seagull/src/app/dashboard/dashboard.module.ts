@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CruxModule } from '../crux/crux.module';
 
 
 @NgModule({
@@ -10,8 +9,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     DashboardComponent
   ],
   imports: [
-    CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    CruxModule
   ]
 })
 export class DashboardModule { }

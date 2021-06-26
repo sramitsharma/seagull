@@ -1,8 +1,19 @@
 .loginContainer {
   backdrop-filter: blur(4px);
-  margin-top: 95px;
+  margin-left: 25%;
   mat-form-field {
     width: 150px;
+  }
+  @media screen and (max-width: 600px) {
+    position: absolute;
+    margin: 12px;
+  }
+}
+
+.ladyImage {
+  height: 100%;
+  @media screen and (max-width: 600px) {
+    height: auto;
   }
 }
 
@@ -33,6 +44,13 @@ mat-form-field {
 
 .loginPage {
   height: 100vh;
+  display: flex;
+  align-items: center;
+    /*{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }*/
 }
 
 form {

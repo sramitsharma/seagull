@@ -6,7 +6,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('./../home/home.module').then(m => m.HomeModule),
     canActivate: [AuthGuard]
   },
@@ -15,7 +15,7 @@ const routes: Routes = [
     component: LoginPageComponent
   },
   {
-    path: 'auth/register',
+    path: 'register',
     component: SignUpComponent
   }];
 

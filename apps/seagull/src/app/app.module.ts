@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CruxModule } from './crux/crux.module';
 import { AppRoutingModule } from './app-routing.module';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
@@ -35,7 +34,6 @@ firebase.initializeApp(environment.firebaseConfig);
     AngularFireStorageModule,// storage
     HomeModule,
     AuthModule,
-    CruxModule.forRoot(),
     AppRoutingModule,
     StoreRouterConnectingModule.forRoot(),
     StoreModule.forRoot(reducers, {
