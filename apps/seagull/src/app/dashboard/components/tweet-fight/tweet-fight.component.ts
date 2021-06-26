@@ -26,7 +26,7 @@ export class TweetFightComponent implements OnInit, AfterContentInit {
 
   ngAfterContentInit(): void {
     this.store.select(fightErrorSelector).subscribe((error: any) => {
-      this.isLoading = false;  
+      this.isLoading = false;
     });
 
     this.store.select(champSelector).subscribe((champs: TwitterUser[]) => {

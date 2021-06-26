@@ -32,7 +32,7 @@
   <div class='spinnerContainer' *ngIf='isLoading'>
     <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_wgh8xmh0.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
   </div>
-  <div class='profileContainer' *ngIf='user1 && user2'>
+  <div class='profileContainer' *ngIf='!isLoading'>
     <div *ngIf='user1' #target>
       <div class='title' id='profileContainer'>{{user1.name}}</div>
       <img src='{{user1.profileImageUrl}}' class='profileImage' alt='Fighter 1 Image' />
