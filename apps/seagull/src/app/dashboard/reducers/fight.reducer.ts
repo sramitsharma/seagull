@@ -45,5 +45,10 @@ export const champSelector = createSelector(
   (state: {Fight: FightState}) => state.Fight.champs
 );
 
+export const fightErrorSelector = createSelector(
+  fightPageFeature,
+  (state: {Fight: FightState}) => state.Fight.fightError
+)
+
 export const fightReducer = (state: FightState | undefined, action: Action): FightState => fightPageReducer(state, action);
 
