@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PortfolioEffect } from './portfolio-effect.service';
+import { FightEffect } from './fight-effect';
 
-describe('PortfolioEffectService', () => {
-  let service: PortfolioEffect;
+describe('FightEffectService', () => {
+  let service: FightEffect;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PortfolioEffect);
+    service = TestBed.inject(FightEffect);
   });
 
   it('should be created', () => {

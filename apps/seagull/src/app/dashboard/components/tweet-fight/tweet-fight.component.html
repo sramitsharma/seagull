@@ -1,0 +1,41 @@
+<div class='fightContainer'>
+  <form [formGroup]="userNameForm" (submit)="fight()" class="twitterFightForm">
+    <mat-form-field appearance="outline" class="form-field" [ngClass]="isFocused ? 'champName' : ''">
+      <mat-label class="formLabel">Champ 1's Twitter Handle</mat-label>
+      <mat-hint *ngIf="!user1">Try handler like billgates</mat-hint>
+      <input matInput formControlName="user1" required autocomplete="off" (focus)="onFocusChange()" class="fighterName">
+      <mat-error *ngIf="userNameForm.controls.user1.touched && userNameForm.controls.user1.invalid">
+        <span *ngIf="userNameForm.controls.user1.errors?.required">This field is mandatory.</span>
+        <span *ngIf="userNameForm.controls.user1.errors?.minLength">Invalid username.</span>
+        <span *ngIf="userNameForm.controls.user1.errors?.pattern">Invalid username.</span>
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" class="fightButton">
+      FIGHT
+    </button>
+    <button mat-raised-button color="warn" type="button" class="fightButton" *ngIf="user1 && user2" (click)="clearFight()">
+      CLEAR
+    </button>
+    <mat-form-field appearance="outline" class="form-field" [ngClass]="isFocused ? 'champName' : ''">
+      <mat-label class="formLabel">Champ 2's Twitter Handle</mat-label>
+      <mat-hint *ngIf="!user2">Try handler like elonmusk</mat-hint>
+      <input matInput formControlName="user2" required autocomplete="off" (focus)="onFocusChange()" class="fighterName">
+      <mat-error *ngIf="userNameForm.controls.user2.touched && userNameForm.controls.user2.invalid">
+        <span *ngIf="userNameForm.controls.user2.errors?.required">This field is mandatory.</span>
+        <span *ngIf="userNameForm.controls.user2.errors?.minLength">Invalid username.</span>
+        <span *ngIf="userNameForm.controls.user2.errors?.pattern">Invalid username.</span>
+      </mat-error>
+    </mat-form-field>
+  </form>
+  <div class='profileContainer'>
+    <div *ngIf='user1'>
+      <div class='title' id='profileContainer'>{{user1.name}}</div>
+      <img src='{{user1.profileImageUrl}}' class='profileImage' alt='Fighter 1 Image' />
+    </div>
+
+    <div *ngIf='user2'>
+      <div class='title'>{{user2.name}}</div>
+      <img src='{{user2.profileImageUrl}}' class='profileImage' alt='Fighter 2 Image' />
+    </div>
+  </div>
+</div>

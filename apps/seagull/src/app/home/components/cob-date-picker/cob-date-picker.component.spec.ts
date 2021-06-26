@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {CobDatePickerComponent} from './cob-date-picker.component';
+import { CobDatePickerComponent } from './cob-date-picker.component';
 
 describe('CobDatePickerComponent', () => {
   let component: CobDatePickerComponent;

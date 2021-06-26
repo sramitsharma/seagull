@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PortfolioEffect } from './portfolio-effect.service';
+import { TwitterUserService } from './twitter-user.service';
 
-describe('PortfolioEffectService', () => {
-  let service: PortfolioEffect;
+describe('TwitterUserService', () => {
+  let service: TwitterUserService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PortfolioEffect);
+    service = TestBed.inject(TwitterUserService);
   });
 
   it('should be created', () => {

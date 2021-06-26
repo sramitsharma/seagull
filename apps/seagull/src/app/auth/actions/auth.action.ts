@@ -1,5 +1,6 @@
-import {createAction, props} from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 import { User } from '@core/models/User';
+
 const onLogin = createAction('[Auth] On Login', props<{ appUser: User }>());
 const onLoginSuccess = createAction('[Auth] On Login Success', props<{ appUser: User }>());
 const onLoginFailed = createAction('[Auth] On Login Failed', props<{ error: any }>());

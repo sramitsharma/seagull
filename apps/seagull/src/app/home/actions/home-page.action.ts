@@ -1,4 +1,4 @@
-import {createAction, props} from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
 const loadValidCob = createAction('[Core] Load Valid Cobs');
 const loadHomePage = createAction('[Home Page] Load HomePage', props<{ appName: string }>());

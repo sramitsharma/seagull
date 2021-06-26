@@ -1,6 +1,6 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import {ValidCobService} from './valid-cob.service';
+import { ValidCobService } from './valid-cob.service';
 
 describe('ValidCobService', () => {
   let service: ValidCobService;

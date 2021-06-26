@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {Router} from '@angular/router';
-import {FormControl, FormGroup} from '@angular/forms';
-import {Store} from '@ngrx/store';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Store } from '@ngrx/store';
 import { AuthState } from '../../reducers/auth.reducer';
 import { authActionTypes } from '../../actions';
 import { User } from '@core/models/User';

@@ -1,7 +1,7 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
-import {Store} from '@ngrx/store';
-import {MatDatepickerInputEvent} from '@angular/material/datepicker';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { HomePageState, validCobSelector } from '../../reducers/home-page.reducer';
 import { homePageActionTypes } from '../../actions';
 

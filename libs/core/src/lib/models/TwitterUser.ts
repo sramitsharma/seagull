@@ -1,8 +1,8 @@
 import { Tweet } from './Tweet';
 
 export class TwitterUser {
-  name: string;
-  publicMatrices: {
+  name?: string;
+  publicMatrices?: {
     tweetCount: number,
     followersCount: number,
     followingCount: number,
@@ -11,12 +11,15 @@ export class TwitterUser {
   location?: string;
   description?: string;
   profileImageUrl?: string;
-  id: number;
+  id?: number;
   userName?: string;
   hashTag?: string;
   url?: string;
-  protected: boolean;
+  protected?: boolean;
   entities?: any;
-  tweetList: Tweet[];
+  tweetList?: Tweet[];
   tweetMatrix?: Map<string, number>;
 }
+
+export type PartialTwitterUser = Partial<TwitterUser>;
+export type FullTwitterUser = Required<TwitterUser>;

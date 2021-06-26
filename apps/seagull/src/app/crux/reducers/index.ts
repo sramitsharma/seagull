@@ -1,7 +1,7 @@
-import {Action, ActionReducer, ActionReducerMap, MetaReducer} from '@ngrx/store';
+import { Action, ActionReducer, ActionReducerMap, MetaReducer } from '@ngrx/store';
 // store composes your map of reducers into a single reducer.
-import {environment} from '../../../environments/environment';
-import {localStorageSync} from 'ngrx-store-localstorage';
+import { environment } from '../../../environments/environment';
+import { localStorageSync } from 'ngrx-store-localstorage';
 
 // Take a reducer, do whatever you need and return a new reducer / reducer middleware (MetaReducer)
 const debug = (reducer: ActionReducer<AppState>): ActionReducer<AppState> => (state: AppState | undefined, action: Action) => {

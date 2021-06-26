@@ -1,4 +1,4 @@
-import {Action, ActionReducer, createReducer, createSelector, on} from '@ngrx/store';
+import { Action, ActionReducer, createReducer, createSelector, on } from '@ngrx/store';
 import { homePageActionTypes } from '../actions';
 
 export const homePageFeatureKey = 'HomePage';
