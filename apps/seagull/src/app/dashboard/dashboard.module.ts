@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TweetFightComponent } from './components/tweet-fight/tweet-fight.component';
 import { CompareChartComponent } from './components/compare-chart/compare-chart.component';
 import { Chart1Component } from './components/chart1/chart1.component';
+import { ChartsModule } from 'ng2-charts';
 
 export function playerFactory() {
   return player;
@@ -29,6 +30,7 @@ export function playerFactory() {
     CruxModule,
     StoreModule.forFeature(fightFeatureKey, fightReducer),
     EffectsModule.forFeature([FightEffect]),
+    ChartsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
