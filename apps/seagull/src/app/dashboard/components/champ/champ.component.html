@@ -1,0 +1,52 @@
+<mat-card class="userProfile" *ngIf='user'>
+  <mat-card-header class="imageContainer">
+    <mat-card-title class="cardTitle">
+      <div class="iconContainer">
+        <a href="{{user.url ? user.url : '#'}}" target="_blank" [ngClass]="user.url ? '' : 'isDisable'">
+          <mat-icon #tooltip="matTooltip" color="accent" [ngClass]="user.url ? '' : 'isDisable'"
+                    [matTooltipPosition]="'left'" class="animate__animated animate__fadeInLeft petsIcon"
+                    matTooltip="{{user.name}} Public Profile">pets
+          </mat-icon>
+        </a>
+        <a href="https://twitter.com/{{user.hashTag}}" target="_blank" #tooltip="matTooltip"
+           [matTooltipPosition]="'left'" matTooltip="{{user.name}} Twitter Profile"
+           class="animate__animated animate__fadeInLeft twitterIcon">
+          <img src="./assets/images/twitterLogo.png" alt="twiiter_logo" style="height: 20px;">
+        </a>
+        <mat-icon #tooltip="matTooltip" color="accent"
+                  [matTooltipPosition]="'left'" class="animate__animated animate__fadeInLeft petsIcon"
+                  matTooltip="{{user.description}}">info
+        </mat-icon>
+      </div>
+      <img src="{{user.profileImageUrl}}" alt="" class="animate__animated animate__fadeIn profileImage"/>
+      <button mat-fab color="accent" aria-label="Tweet to the user" (click)="tweetUser(user)">
+        <mat-icon #tooltip="matTooltip" [matTooltipPosition]="'right'" matTooltip="Poke {{user.name}}">message</mat-icon>
+      </button>
+      <button mat-fab color="accent" aria-label="Tweet to the user"
+              [ngClass]="user.url ? '' : 'isDisable'"
+              style="left: -25px;top: 70px;display: none" [disabled]="true">
+        <mat-icon  style="cursor: not-allowed" disabled="true" #tooltip="matTooltip" [matTooltipPosition]="'right'" matTooltip="Follow {{user.name}} (Arrisca Prime*)">person_add</mat-icon>
+      </button>
+    </mat-card-title>
+    <mat-card-subtitle class="animate__animated animate__fadeInUp userName">
+      <div><strong>{{user.name | titlecase}}</strong></div>
+      <div><strong>{{user.location ? user.location : 'Unknown Planet' }}</strong></div>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="truncatedDescription">
+      {{user.description ? user.description : 'Mysterious Champ...Robinhood...' }}
+    </p>
+    <ul class="publicMatrices">
+      <li>
+        <span><strong>Tweet Counts</strong></span> <span>{{this.user.publicMatrices?.tweetCount}}</span>
+      </li>
+      <li>
+        <span><strong>Followers Counts</strong></span> <span>{{this.user.publicMatrices?.followersCount}}</span>
+      </li>
+      <li>
+        <span><strong>Following Counts</strong></span> <span>{{this.user.publicMatrices?.followingCount}}</span>
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

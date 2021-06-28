@@ -33,14 +33,8 @@
     <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_wgh8xmh0.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
   </div>
   <div class='profileContainer' *ngIf='!isLoading'>
-    <div *ngIf='user1' #target>
-      <div class='title' id='profileContainer'>{{user1.name}}</div>
-      <img src='{{user1.profileImageUrl}}' class='profileImage' alt='Fighter 1 Image' />
-    </div>
+    <seagull-champ [user]='user1'></seagull-champ>
     <seagull-compare-chart></seagull-compare-chart>
-    <div *ngIf='user2'>
-      <div class='title'>{{user2.name}}</div>
-      <img src='{{user2.profileImageUrl}}' class='profileImage' alt='Fighter 2 Image' />
-    </div>
+    <seagull-champ [user]='user2'></seagull-champ>
   </div>
 </div>
