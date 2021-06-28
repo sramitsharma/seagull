@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Chart1Component } from '../chart1/chart1.component';
+import { ErrorLogService } from '@core/services/error-log.service';
 
 @Component({
   selector: 'seagull-compare-chart',
@@ -10,7 +11,7 @@ import { Chart1Component } from '../chart1/chart1.component';
 export class CompareChartComponent {
   private warning = 'Admin has not configured this chart for you , please contact Admin!!';
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public logService: ErrorLogService) { }
 
   openChart1(): void {
     const dialogRef = this.dialog.open(Chart1Component);
@@ -21,14 +22,14 @@ export class CompareChartComponent {
   }
 
   openChart2(): void {
-    alert(this.warning);
+    this.logService.logError({message: this.warning});
   }
 
   openChart3(): void {
-    alert(this.warning);
+    this.logService.logError({message: this.warning});
   }
 
   openChart4(): void {
-    alert(this.warning);
+    this.logService.logError({message: this.warning});
   }
 }
