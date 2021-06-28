@@ -2,6 +2,8 @@ import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {ChartDataSets, ChartOptions, ChartType} from 'chart.js';
 import {BaseChartDirective, Color, Label} from 'ng2-charts';
 import * as pluginAnnotations from 'chartjs-plugin-annotation';
+import { Store } from '@ngrx/store';
+import { FightState, publicMatrixSelector } from '../../reducers';
 
 @Component({
   selector: 'seagull-line-chart',
@@ -9,93 +11,54 @@ import * as pluginAnnotations from 'chartjs-plugin-annotation';
   styleUrls: ['./chart1.component.scss']
 })
 export class Chart1Component implements OnInit{
-  @ViewChild(BaseChartDirective, {static: true}) chart3: BaseChartDirective | undefined;
-  @ViewChild('lineChartCanvas', {static: true}) canvasObj: any;
-  @Input() inputData: any[] = [];
-
-  public lineChartData: ChartDataSets[] = [
-    {
-      label: 'Series B',
-      borderColor: '#ec250d',
-      borderWidth: 2,
-      borderDash: [],
-      borderDashOffset: 0.0,
-      pointBackgroundColor: '#ec250d',
-      pointBorderColor: 'rgba(255,255,255,0)',
-      pointHoverBackgroundColor: '#ec250d',
-      pointHoverBorderWidth: 15
-    }
-  ];
-  public lineChartLabels: Label[] = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-  public inputDatas = [
-    [80 + Math.floor(Math.random() * 100),
-      120 + Math.floor(Math.random() * 100), 105 + Math.floor(Math.random() * 100),
-      110 + Math.floor(Math.random() * 100), 95 + Math.floor(Math.random() * 100),
-      105 + Math.floor(Math.random() * 100), 90, 100, 80, 95, 70, 120]
-  ];
-  public lineChartOptions: any = {
+  @ViewChild('arriscaGroupBarChart', {static: true}) arriscaGroupBarChart: any;
+  public barChartConfig: {
+    pieChartLabels: any,
+    barChartData: any
+  } = { barChartData: [], pieChartLabels: ['Tweet Count', 'Followers', 'Following']};
+  public subtitle = 'Twitter Public Matrices';
+  public barChartOptions: ChartOptions = {
     responsive: true,
     maintainAspectRatio: false,
     animation: {
-      duration: 2000,
-      easing: 'easeInOutQuint',
+      duration: 1400,
+      easing: 'easeInOutBounce',
       animateScale: true,
       animateRotate: true
     },
-    annotation: {},
-    scales: {
-      yAxes: [{
-        gridLines: {
-          drawBorder: true,
-          color: 'rgba(222,222,222,0)',
-          zeroLineColor: 'transparent',
-        },
-        ticks: {
-          suggestedMin: 60,
-          suggestedMax: 125,
-          padding: 20,
-          fontColor: '#9a9a9a'
-        }
-      }],
-
-      xAxes: [{
-        gridLines: {
-          drawBorder: false,
-          color: 'rgba(225,78,202,0.1)',
-          zeroLineColor: 'transparent',
-        },
-        ticks: {
-          padding: 20,
-          fontColor: '#9a9a9a'
-        }
-      }]
+    scales: {xAxes: [{}], yAxes: [{}]},
+    plugins: {
+      datalabels: {
+        anchor: 'end',
+        align: 'end',
+      }
+    },
+    title: {
+      display: false,
+      text: 'Twitter Public Matrices'
     }
   };
-
-  public lineChartColors: Color[] = [
-    {
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    }
-  ];
-  public lineChartLegend = false;
-  public lineChartType: ChartType = 'line';
-  public lineChartPlugins = [pluginAnnotations];
+  public chartType: ChartType = 'bar';
+  public barChartLegend = true;
 
   ngOnInit(): void {
-    const gradient = this.canvasObj.nativeElement.getContext('2d').createLinearGradient(0, 230, 0, 50);
-    gradient.addColorStop(1, 'rgba(233,32,16,0.2)');
-    gradient.addColorStop(0.4, 'rgba(233,32,16,0.1)');
-    gradient.addColorStop(0, 'rgba(233,32,16,0.0)'); // red colors
-    this.lineChartColors = [
-      {
-        backgroundColor: gradient
-      }
-    ];
+    this.store.select(publicMatrixSelector).subscribe((champs) => {
+      const user1 = champs[0];
+      const user2 = champs[1];
+      this.barChartConfig.barChartData = [{
+        label: user1?.userName,
+        data: [user1?.publicMatrices?.tweetCount, user1?.publicMatrices?.followersCount,
+          user1?.publicMatrices?.followingCount]
+      }, {
+        label: user2?.userName,
+        data: [user2?.publicMatrices?.tweetCount, user2?.publicMatrices?.followersCount,
+          user2?.publicMatrices?.followingCount],
+        type: 'bar'
+      }];
+    });
+  }
+
+  constructor(private store: Store<FightState>) {
   }
 
 }

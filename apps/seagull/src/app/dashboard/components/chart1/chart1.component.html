@@ -1,13 +1,12 @@
-<h2 mat-dialog-title>Install Angular</h2>
 <mat-dialog-content class="mat-typography">
-  <div class="chart-wrapper">
-    <canvas #lineChartCanvas
-            [chartType]="lineChartType" [colors]="lineChartColors" [data]="inputDatas" [datasets]="lineChartData"
-            [labels]="lineChartLabels" [legend]="lineChartLegend" [options]="lineChartOptions" [plugins]="lineChartPlugins"
-            baseChart height="250" width="325"></canvas>
-  </div>
+  <mat-card class="subChart" *ngIf="barChartConfig.pieChartLabels.length > 0">
+    <mat-card-title>Relative Context</mat-card-title>
+    <mat-card-subtitle>{{subtitle}}</mat-card-subtitle>
+    <mat-card-content>
+      <canvas #arriscaGroupBarChart [chartType]="chartType" [datasets]="barChartConfig.barChartData"
+              [labels]="barChartConfig.pieChartLabels" [legend]="barChartLegend" [options]="barChartOptions"
+              baseChart height="360" width="415">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
 </mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
-</mat-dialog-actions>

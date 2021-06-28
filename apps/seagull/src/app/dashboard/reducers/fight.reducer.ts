@@ -50,5 +50,14 @@ export const fightErrorSelector = createSelector(
   (state: {Fight: FightState}) => state.Fight.fightError
 )
 
+export const publicMatrixSelector = createSelector(
+  fightPageFeature,
+  (state: {Fight: FightState}) => state.Fight.champs.map(champ => {
+    return {
+      userName: champ.name,
+      publicMatrices: champ.publicMatrices
+    }
+  })
+)
 export const fightReducer = (state: FightState | undefined, action: Action): FightState => fightPageReducer(state, action);
 
