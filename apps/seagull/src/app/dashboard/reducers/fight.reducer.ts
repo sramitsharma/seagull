@@ -55,7 +55,8 @@ export const publicMatrixSelector = createSelector(
   (state: {Fight: FightState}) => state.Fight.champs.map(champ => {
     return {
       userName: champ.name,
-      publicMatrices: champ.publicMatrices
+      publicMatrices: champ.publicMatrices,
+      tweetMatrix: champ.tweetMatrix
     }
   })
 )

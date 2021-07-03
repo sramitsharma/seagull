@@ -18,7 +18,7 @@ export class TwitterUser {
   protected?: boolean;
   entities?: any;
   tweetList?: Tweet[];
-  tweetMatrix?: Map<string, number>;
+  tweetMatrix?: Map<string, number> | any;
 }
 
 export type PartialTwitterUser = Partial<TwitterUser>;

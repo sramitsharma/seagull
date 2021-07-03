@@ -13,6 +13,7 @@ import { CompareChartComponent } from './components/compare-chart/compare-chart.
 import { Chart1Component } from './components/chart1/chart1.component';
 import { ChartsModule } from 'ng2-charts';
 import { ChampComponent } from './components/champ/champ.component';
+import { Chart2Component } from './components/chart2/chart2.component';
 
 export function playerFactory() {
   return player;
@@ -24,7 +25,8 @@ export function playerFactory() {
     TweetFightComponent,
     CompareChartComponent,
     Chart1Component,
-    ChampComponent
+    ChampComponent,
+    Chart2Component
   ],
   imports: [
     DashboardRoutingModule,

@@ -1,0 +1,12 @@
+<mat-dialog-content class="mat-typography">
+  <mat-card class="subChart" *ngIf="barChartConfig.pieChartLabels.length > 0">
+    <mat-card-title>Relative Context</mat-card-title>
+    <mat-card-subtitle>Relative Context Mapping</mat-card-subtitle>
+    <mat-card-content>
+      <canvas #arriscaGroupBarChart [chartType]="chartType" [datasets]="barChartConfig.barChartData"
+              [labels]="barChartConfig.pieChartLabels" [legend]="barChartLegend" [options]="barChartOptions"
+              baseChart height="360" width="415">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
