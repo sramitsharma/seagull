@@ -34,7 +34,9 @@
   </div>
   <div class='profileContainer' *ngIf='!isLoading'>
     <seagull-champ [user]='user1'></seagull-champ>
-    <seagull-compare-chart></seagull-compare-chart>
+    <div *ngIf='user1 && user2'>
+      <seagull-compare-chart></seagull-compare-chart>
+    </div>
     <seagull-champ [user]='user2'></seagull-champ>
   </div>
 </div>
