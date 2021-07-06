@@ -1,0 +1,28 @@
+<div class="diagram-parent">
+  <mat-form-field appearance="fill" [formGroup]="range">
+    <mat-label class="example-form-field">Choose a date</mat-label>
+    <input matInput [matDatepicker]="datepicker" formControlName="start" style='color: white'>
+    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+    <mat-datepicker #datepicker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button (click)="triggerJob()">Trigger</button>
+  <div style="margin: 15px">
+    <div style="color: white">Tea BPM Data</div>
+    <ag-grid-angular
+      style="width: 92vw; height: 400px;"
+      class="ag-theme-alpine"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+    >
+    </ag-grid-angular>
+  </div>
+
+  <div *ngIf="diagramUrl">
+    <seagull-diagram [url]="diagramUrl" (importDone)="handleImported($event)"></seagull-diagram>
+    <!--<div class="import-error" *ngIf="importError">
+      <strong>Failed to render diagram: </strong>
+      {{ importError.message }}
+    </div>-->
+  </div>
+</div>
+

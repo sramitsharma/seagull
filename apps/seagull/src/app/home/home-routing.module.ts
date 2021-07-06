@@ -18,6 +18,11 @@ const routes: Routes = [
         path: 'chat',
         canActivate: [AuthGuard],
         loadChildren: async () => (await import('../chat/chat.module')).ChatModule
+      },
+      {
+        path: 'process',
+        canActivate: [AuthGuard],
+        loadChildren: async () => (await import('../process/process.module')).ProcessModule
       }
     ]
   }

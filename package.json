@@ -63,7 +63,11 @@
     "ngx-lottie": "^7.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "bpmn-js": "8.2.0",
+    "bpmn-js-sketchy": "0.5.3",
+    "ag-grid-angular": "24.1.0",
+    "ag-grid-community": "24.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^12.0.0",

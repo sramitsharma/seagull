@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://arrisca.herokuapp.com",
+    "target": "https://anantayarisca.herokuapp.com",
     "secure": false
   },
   "/training": {
@@ -20,13 +20,15 @@
     "logLevel": "debug"
   },
   "/engine-rest": {
-    "target": "https://arrisca.herokuapp.com",
+    "target": "https://anantayarisca.herokuapp.com",
     "secure": false,
+    "changeOrigin": true,
     "logLevel": "debug"
   },
   "/camunda": {
-    "target": "https://arrisca.herokuapp.com",
+    "target": "https://anantayarisca.herokuapp.com",
     "secure": false,
+    "changeOrigin": true,
     "logLevel": "debug"
   }
 }

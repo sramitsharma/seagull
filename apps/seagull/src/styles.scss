@@ -2,8 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import '~animate.css/animate.min';
-// @import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
-// @import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-alpine.css";
 html,
 body {
     height: 100%;

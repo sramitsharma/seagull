@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  serverUrl: 'https://arrisca.herokuapp.com',
+  serverUrl: 'https://anantayarisca.herokuapp.com',
   flourishUrl: 'https://public.flourish.studio/resources/embed.js',
   twitterApi1Url: 'https://api.twitter.com/1.1',
   twitterApi2Url: 'https://api.twitter.com/2',

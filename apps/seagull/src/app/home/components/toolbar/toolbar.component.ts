@@ -24,11 +24,12 @@ export class ToolbarComponent {
         title: 'Dashboard',
         tagId: 'dashboard',
         route: '/dashboard'
-       }//, {
-      //   title: 'Favorite',
-      //   tagId: 'favorite',
-      //   route: '/favorite'
-      // }, {
+       }, {
+         title: 'Process',
+         tagId: 'favorite',
+         route: '/process'
+       }
+      //, {
       //   title: 'Share',
       //   tagId: 'share',
       //   route: '/share'
