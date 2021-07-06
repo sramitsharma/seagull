@@ -94,7 +94,7 @@ export class ChatComponent {
         serverPath
       })
         .subscribe((res: any) => {
-          this.diagramUrl = '/engine-rest/process-definition/'
+          this.diagramUrl = 'https://anantayarisca.herokuapp.com/engine-rest/process-definition/'
             + res.processDefinitionId
             + '/xml';
         });
